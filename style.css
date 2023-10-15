@@ -38,4 +38,5 @@ body {
 }
 .calculator div {
     margin: 2rem;
+    cursor: pointer;
 }
