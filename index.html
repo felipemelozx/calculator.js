@@ -3,119 +3,50 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <title>Projeto Prático Guiado 1</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./app.js" defer></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="screen"></div>
-        <div class="calculator">
-            <table>
-                <tr>
-                    <td>
-                        <div><span>C</span></div>
-                    </td>
-                    <td>
-                        <div><span>%</span></div>
-                    </td>
-                    <td>
-                        <div><span>/</span></div>
-                    </td>
-                    <td>
-                        <div><span>&lArr;</span></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <span>7</span>
-                        </div>
-                    </td>
-                    </td>
-                    <td>
-                        <div>
-                            <span>8</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <span>9</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <span>X</span>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <span>4</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <span>5</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <span>6</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <span>-</span>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <span>1</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <span>2</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <span>3</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <span>+</span>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <span>0</span>
-                        </div>
-                    </td>
-                    <td></td>
-                    <td>
-                        <div>
-                            <span>,</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <span>=</span>
-                        </div>
-                    </td>
-                </tr>
-            </table>
+    <main data-theme="dark">
+        <header class="flex align-center justify-between">
+            <h1>Calc.js</h1>
+            <button id="themeSwitcher">Switch Theme Dark/Light</button>
+        </header>
+        <input type="text" id="input">
+        <div id="keys">
+            <button id="clear">C</button>
+            <button class="charKey" data-value=" ( ">(</button>
+            <button class="charKey" data-value=" ) ">)</button>
+            <button class="charKey" data-value=" / ">/</button>
+            <button class="charKey" data-value="7">7</button>
+            <button class="charKey" data-value="8">8</button>
+            <button class="charKey" data-value="9">9</button>
+            <button class="charKey" data-value=" * ">*</button>
+            <button class="charKey" data-value="4">4</button>
+            <button class="charKey" data-value="5">5</button>
+            <button class="charKey" data-value="6">6</button>
+            <button class="charKey" data-value=" - ">-</button>
+            <button class="charKey" data-value="1">1</button>
+            <button class="charKey" data-value="2">2</button>
+            <button class="charKey" data-value="3">3</button>
+            <button class="charKey" data-value=" + ">+</button>
+            <button class="charKey" data-value="0">0</button>
+            <button class="charKey" data-value=".">.</button>
+            <button class="charKey" data-value=" % ">mod</button>
+            <button id="equal">=</button>
         </div>
-    </div>
+        <section class="flex align-center justify-between">
+            <button id="copyToClipboard">Copy</button>
+            <input type="text" id="result" disabled>
+        </section>
+    </main>
 </body>
 
 </html>
